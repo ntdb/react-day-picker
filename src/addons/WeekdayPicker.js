@@ -43,10 +43,10 @@ class WeekdayPicker extends Component {
 
   render() {
     const { locale, style, tabIndex } = this.props;
-    let className = `DayPicker DayPicker--${locale}`;
+    let className = `WeekdayPicker DayPicker DayPicker--${locale}`;
 
     if (!this.props.onWeekdayClick && !this.props.onWeekdayTouchTap) {
-      className = `${className} DayPicker--weekdayInteractionDisabled`;
+      className = `${className} WeekdayPicker--InteractionDisabled`;
     }
     if (this.props.className) {
       className = `${className} ${this.props.className}`;
@@ -70,8 +70,12 @@ class WeekdayPicker extends Component {
       weekdays.push(this.renderWeekday(i));
     }
     return (
-      <div>
-        { weekdays }
+      <div className="DayPicker-Month">
+        <div className="DayPicker-Weekdays">
+          <div>
+            { weekdays }
+          </div>
+        </div>
       </div>
     );
   }
