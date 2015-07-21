@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import Utils from "./Utils";
+import WeekdayPicker from "./addons/WeekdayPicker";
 
 const keys = {
   LEFT: 37,
@@ -9,6 +10,8 @@ const keys = {
 };
 
 class DayPicker extends Component {
+
+  static WeekdayPicker = WeekdayPicker;
 
   static propTypes = {
 
